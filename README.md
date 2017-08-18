@@ -21,7 +21,11 @@
     
     // 需要监听的目录
     $dir = __DIR__ ;
-    
+    // 需要监听的文件后缀
+    $ext = ['.php','.ini']; 
+    // 服务器重启的秒数 1秒重启 
+    $interval = 1 ;
+        
     $master_pid = isset($argv[1]) ? $argv[1]:false;
     
     require_once $dir . '/vendor/autoload.php' ;
