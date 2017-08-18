@@ -30,7 +30,7 @@
     
     require_once $dir . '/vendor/autoload.php' ;
     if($master_pid){
-        $reload = \Rookiejin\SwooleTools\Reload::getInstance()->watch($dir,$master_pid,['.php']);
+        $reload = \Rookiejin\SwooleTools\Reload::getInstance()->watch($dir,$master_pid,$ext,$interval);
     }else{
         echo "please input pid" . PHP_EOL ;
     }
