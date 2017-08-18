@@ -1,0 +1,19 @@
+{
+    "name": "rookiejin/swoole_tools",
+    "description": "swoole reload tools for development",
+    "version":"0.2",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "rookiejin",
+            "email": "mrjnamei@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+        "psr-4":{
+            "Rookiejin\\SwooleTools\\":"src/"
+        }
+    }
+}
