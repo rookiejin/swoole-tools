@@ -39,12 +39,13 @@
      php reload.php  23869  
    
    或者 
-   # pid file 是将pid保存在这个文件里面了，程序直接会去读这个文件。
-   php reload.php  /tmp/swoole.pid 
+   pid file 是将pid保存在这个文件里面了，程序直接会去读这个文件。
+   
+    php reload.php  /tmp/swoole.pid 
 `
 
-    #### 注意 要先启动 swoole_server 再启用reload 
-    * 感谢 @matyhtf [swoole/auto_reload](https://github.com/swoole/auto_reload)
+## 注意 要先启动 swoole_server 再启用reload 
+* 感谢 @matyhtf [swoole/auto_reload](https://github.com/swoole/auto_reload)
     
     
     
