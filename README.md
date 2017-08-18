@@ -2,6 +2,13 @@
    
 * 监听目录变化自动重启swoole_server 
 
+## 安装
+
+* 依赖inotify和swoole扩展
+```js 
+    pecl install swoole
+    pecl install inotify
+```
 
 ## Usage
 
