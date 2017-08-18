@@ -5,7 +5,7 @@
 
 ## Usage
 
-`
+```php 
     composer require rookiejin/swoole_tooles 
     
     touch  reload.php 
@@ -19,13 +19,13 @@
     }else{
         echo "please input pid" . PHP_EOL ;
     }
+```
     
-    ?>
+ * 在命令行执行 
+ * 23311 是swoole_server的pid
+ * 可以用 ps -axf | grep php 查看  
+```shell
     
-   // 在命令行执行 
-    # 23311 是swoole_server的pid
-    # 可以用 ps -axf | grep php 查看  
-
     23869 pts/30   S      0:00 php index.php
     24139 pts/30   S      0:00  \_ php index.php
     24140 pts/30   S      0:00  \_ php index.php
@@ -36,13 +36,13 @@
     24145 pts/30   S      0:00  \_ php index.php
     24146 pts/30   S      0:00  \_ php index.php
 
-     php reload.php  23869  
-   
-   或者 
-   pid file 是将pid保存在这个文件里面了，程序直接会去读这个文件。
+```
+   php reload.php  23869   或者 使用pidfile
+   是将pid保存在这个文件里面了，程序直接会去读这个文件。
    
     php reload.php  /tmp/swoole.pid 
-`
+    
+    pidfile 样例 ：echo 23869  > /tmp/swoole.pid  
 
 ## 注意 要先启动 swoole_server 再启用reload 
 * 感谢 @matyhtf [swoole/auto_reload](https://github.com/swoole/auto_reload)
